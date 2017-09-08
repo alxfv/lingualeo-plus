@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "lingualeo Plus",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://lingualeo.com/*"],
+    "js": ["app.js"],
+    "css": ["app.css"]
+  }],
+  "permissions": [
+    "activeTab",
+    "https://lingualeo.com/"
+  ]
+}
