@@ -11,11 +11,15 @@
   },
   "content_scripts": [{
     "matches": ["https://lingualeo.com/*"],
-    "js": ["app.js"],
-    "css": ["app.css"]
+    "js": ["app.js", "contentscript.js"],
+    "css": ["app.css"],
+    "run_at": "document_end"
   }],
   "permissions": [
     "activeTab",
     "https://lingualeo.com/"
+  ],
+  "web_accessible_resources": [
+    "script.js"
   ]
 }
